@@ -69,7 +69,7 @@
       }
     },
     {
-      "name": "SAPUI5",
+      "name": "SAPUI5 northwind",
       "cwd": "${workspaceFolder}/SAPUI5",
       "runtimeArgs": [
         "run-script",
@@ -78,8 +78,18 @@
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npm",
+      "args": [
+        "--",
+        "--backendConfig",
+        "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}] "
+      ],
       "windows": {
-        "runtimeExecutable": "npm.cmd"
+        "runtimeExecutable": "npm.cmd",
+        "args": [
+          "--",
+          "--backendConfig",
+          "\"[{\\\"path\\\":\\\"/sap\\\",\\\"destination\\\":\\\"Northwind\\\"}]\" "
+        ]
       },
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",

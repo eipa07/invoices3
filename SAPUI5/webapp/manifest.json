@@ -10,7 +10,17 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
-    "ach": "ach"
+    "ach": "ach",
+    "dataSources": {
+      "Northwind.svc": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -28,7 +38,6 @@
       "phone": true
     }
   },
-
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
@@ -55,6 +64,15 @@
         "settings": {
           "bundleName": "logaligroup.SAPUI5.i18n.i18n"
         }
+      },
+      "": {
+        "dataSource": "Northwind.svc",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
+        }
       }
     },
     "resources": {
@@ -78,7 +96,9 @@
         {
           "name": "RouteApp",
           "pattern": "RouteApp",
-          "target": ["TargetApp"]
+          "target": [
+            "TargetApp"
+          ]
         }
       ],
       "targets": {
