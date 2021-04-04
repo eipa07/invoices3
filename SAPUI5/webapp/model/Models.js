@@ -8,11 +8,11 @@ sap.ui.define([
          * 
          */
 
-    (JSONModel) => {
+    function (JSONModel) {
         "use strict";
 
         return {
-            createRecipient: () => {
+            createRecipient: function () {
                 var oData = {
                     recipient: {
                         name: "World"

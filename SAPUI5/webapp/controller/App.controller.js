@@ -8,7 +8,7 @@ sap.ui.define([
          * 
          */
 
-    (Controller) => {
+    function (Controller) {
         "use strict";
 
         return Controller.extend("logaligroup.SAPUI5.controller.App", {
