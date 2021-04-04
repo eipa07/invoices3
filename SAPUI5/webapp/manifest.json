@@ -12,7 +12,7 @@
     "resources": "resources.json",
     "ach": "ach",
     "dataSources": {
-      "Northwind.svc": {
+      "mainService": {
         "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
@@ -65,8 +65,8 @@
           "bundleName": "logaligroup.SAPUI5.i18n.i18n"
         }
       },
-      "": {
-        "dataSource": "Northwind.svc",
+      "northwind": {
+        "dataSource": "mainService",
         "preload": true,
         "settings": {
           "defaultBindingMode": "TwoWay",
